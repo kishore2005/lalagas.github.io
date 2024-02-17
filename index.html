@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>♨️ LALA GAS ♨️</title>
+    <style>@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        
+        body {
+          font-family: "Poppins", sans-serif;
+        }
+        
+        .container {
+          width: 100%;
+          height: 1000px;
+          margin: auto;
+        }
+        
+        .navbar {
+          width: 100%;
+          height: 100px;
+          box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+        }
+        
+        .nav-container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          height: 62px;
+        }
+        
+        .navbar .menu-items {
+          display: flex;
+          
+        }
+        
+        .navbar .nav-container li {
+          list-style: none;
+        }
+        
+        .navbar .nav-container a {
+          text-decoration: none;
+          color: #e7ebed;
+          font-weight: 500;
+          font-size: 1.2rem;
+          padding: 0.7rem;
+        }
+        
+        .navbar .nav-container a:hover{
+            font-weight: bolder;
+        }
+        
+        .nav-container {
+          display: block;
+          position: relative;
+          height: 60px;
+        }
+        
+        .nav-container .checkbox {
+          position: absolute;
+          display: block;
+          height: 32px;
+          width: 32px;
+          top: 20px;
+          left: 20px;
+          z-index: 5;
+          opacity: 0;
+          cursor: pointer;
+        }
+        
+        .nav-container .hamburger-lines {
+          display: block;
+          height: 26px;
+          width: 32px;
+          position: absolute;
+          top: 17px;
+          left: 20px;
+          z-index: 2;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+        
+        .nav-container .hamburger-lines .line {
+          display: block;
+          height: 4px;
+          width: 100%;
+          border-radius: 10px;
+          background: #feffff;
+        }
+        
+        .nav-container .hamburger-lines .line1 {
+          transform-origin: 0% 0%;
+          transition: transform 0.4s ease-in-out;
+        }
+        
+        .nav-container .hamburger-lines .line2 {
+          transition: transform 0.2s ease-in-out;
+        }
+        
+        .nav-container .hamburger-lines .line3 {
+          transform-origin: 0% 100%;
+          transition: transform 0.4s ease-in-out;
+        }
+        
+        
+        
+        /* you can the size menu bar */
+        
+        
+        
+        
+        
+        .navbar .menu-items {
+          padding-top: 120px;
+          box-shadow: inset 0 0 2000px rgba(0, 0, 0, 0.5);
+          height: 1000px;
+          width: 2000%;
+          transform: translate(-150%);
+          display: flex;
+          flex-direction: column;
+          margin-left: -40px;
+          padding-left: 50px;
+          transition: transform 0.5s ease-in-out;
+          background-color: #000000;
+        
+        }
+        
+        .navbar .menu-items li {
+          margin-bottom: 1.2rem;
+          font-size: 1.5rem;
+          font-weight: 500;
+          
+        }
+        
+        .logo {
+          position: absolute;
+          top: 5px;
+          right: 15px;
+          font-size: 1.2rem;
+          color: #0e2431;
+        }
+        
+        .nav-container input[type="checkbox"]:checked ~ .menu-items {
+          transform: translateX(0);
+        }
+        
+        .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+          transform: rotate(45deg);
+        }
+        
+        .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+          transform: scaleY(0);
+        }
+        
+        .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+          transform: rotate(-45deg);
+        }
+        
+        .nav-container input[type="checkbox"]:checked ~ .logo{
+          display: none;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        *{
+          margin: 0;
+          padding: 0;
+          font-family: 'Poppins', sans-serif;
+        }
+        
+        body{
+          background: #CAC531;  /* fallback for old browsers */
+          background: -webkit-linear-gradient(to right, #F3F9A7, #CAC531);  /* Chrome 10-25, Safari 5.1-6 */
+          background: linear-gradient(to right, #F3F9A7, #CAC531); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+          
+          font-family: Arial, sans-serif;
+          padding: 20px;
+        }
+        
+        html, body {
+          height: 100%;
+        }
+        
+        .container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+          margin-top: 50px;
+        }
+        
+        .product-card {
+          width: 300px;
+          border-radius: 10px;
+          -webkit-box-shadow:  0px 0px 47px -20px rgba(0,0,0,1);
+          -moz-box-shadow:  0px 0px 47px -20px rgba(0,0,0,1);
+          box-shadow:  0px 0px 47px -20px rgba(0,0,0,1);
+          margin: 60px 0px 60px 0px;
+          background-color: #fff;
+        }
+        
+        .product-image {
+          height: 300px;
+          overflow: hidden;
+         
+          top:-80px;
+          padding: 30px;
+        }
+        
+        .product-image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.5s;
+          border-radius: 10px;
+        }
+        
+        .product-image:hover img {
+          transform: scale(1.1);
+        }
+        
+        .product-details {
+          padding: 20px;
+          margin-top:-90px;
+        }
+        
+        .product-title {
+          font-size: 1.5rem;
+          margin-bottom: 10px;
+        }
+        
+        .product-price {
+          font-size: 1.25rem;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+        
+        .product-description {
+          font-size: 1rem;
+          line-height: 1.5;
+          margin-bottom: 10px;
+          color: #666;
+        }
+        
+        .product-details.expand {
+          height: auto;
+        }
+        
+        .product-details .expand-button {
+          cursor: pointer;
+          font-size: 1rem;
+          color: #666;
+          text-align: center;
+          margin-top: 10px;
+        }
+        
+        .product-details .expand-button:hover {
+          color: #000;
+          text-decoration: underline;
+        }
+        .buttons {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        
+        .add-to-cart,
+        .compare {
+          padding: 10px 20px;
+          border: none;
+          border-radius: 20px;
+          color: #fff;
+          font-size: 1rem;
+          font-weight: bold;
+          cursor: pointer;
+        }
+        
+        .add-to-cart {
+          background-color: #666;
+        }
+        
+        .compare {
+          background-color: #CAC531;
+          color:#fff;
+        }
+        
+        .add-to-cart:hover,
+        .compare:hover {
+          opacity: 0.8;
+        }
+        
+        .credit a {
+          text-decoration: none;
+          color: #000;
+          font-weight: 800;
+        }
+        
+        .credit {
+            color: #000;
+          text-align: center;
+          margin-top: 10px;
+          font-family: Verdana,Geneva,Tahoma,sans-serif;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap');
+        
+        * {
+        box-sizing: border-box;
+        }
+        
+        body { 
+        color: #28282e;
+        font-family: 'Open Sans', sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 300vh;
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        background-image: url(https://images.pexels.com/photos/3616764/pexels-photo-3616764.jpeg?auto=compress&cs=tinysrgb&w=600);
+        
+        }
+        
+        .header {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1vw;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 2rem 3rem;
+        background: #fff;
+        box-shadow: 0 0 80px rgb(0, 0, 0, 0.1);
+        }
+        
+        
+        
+        
+        
+        p {
+        font-size: 1.6rem;
+        }
+        
+        .gsap-3-logo {
+        width: 20vw;
+        max-width: 100px;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        mix-blend-mode: difference;
+        }
+        
+        .pv-logo {
+        position: fixed;
+        top: 30px;
+        left: 30px;
+        
+        img {
+          border-radius: 50%;
+          max-width: 40px;
+        }
+        }
+        .twelve h1 {
+        font-size:26px; font-weight:700;  letter-spacing:1px; text-transform:uppercase; width:160px; text-align:center; margin:auto; white-space:nowrap; padding-bottom:13px;
+        }
+
+        .button-64 {
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(203, 199, 207, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.button-64:active,
+.button-64:hover {
+  outline: 0;
+}
+
+.button-64 span {
+  background-color: rgb(0, 0, 0);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.button-64:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .button-64 {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}
+
+        </style>
+    <script src="./java.js"></script>
+    
+        <nav>
+          <div class="navbar">
+            <div class="container nav-container">
+                <input class="checkbox" type="checkbox" name="" id="" />
+                <div class="hamburger-lines">
+                  <span class="line line1"></span>
+                  <span class="line line2"></span>
+                  <span class="line line3"></span>
+                </div>  
+              <div class="logo">
+                <h1>♨️ LALA GAS ♨️</h1>
+              </div>
+              
+            </div>
+          </div>
+        </nav>
+      
+    
+     
+
+
+
+      
+</head>
+<body>
+  
+
+ <!-- 
+  button
+--> 
+<button class="button-64" role="button"   onclick="window.location.href='https://surveyheart.com/form/65d0b535d6522b0eab31f8dc';" ><span class="text">ORDER NOW 🛒</span></button>
+<br>
+<h2 style="text-align: center;">CONTACT:9894073441</h2>
+
+
+
+<br><br>
+
+
+
+
+  <div class="twelve">
+     
+      <h1>DELIVERY</h1>
+    <h2 style="text-align: center;">🚚🚚WITHIN 15 TO 20 MINUTES🚚🚚</h2>
+    <br>
+    <br>
+    <h2 style="text-align: center;">IF NOT THEN FREE DELIVERY</h2>
+    <br>
+    <br>
+    <h1>GAS PRICE</h1>
+    </div>
+  <div class="container">
+      
+    <div class="product-card">
+      
+      <div class="product-image">
+        <img src="https://kweli.shop/wp-content/uploads/2022/07/Total-Gas-12kg-Refill.png" alt="Product Image">
+      </div>
+      <div class="product-details">
+        <br>
+        <h2 class="product-title">TOTAL 12KG</h2>
+        <p class="product-price">PRICE : ₹1100 </p>
+        <p class="product-price">DELIVERY : ₹50 </p>
+       
+      </div>
+    </div>
+
+<!-- 
+  break
+--> 
+
+    <div class="product-card">
+      
+      <div class="product-image">
+        <img src="https://5.imimg.com/data5/IU/IK/MY-35388701/17-kg-lpg-gas-cylinder.jpg" alt="Product Image">
+      </div>
+      <div class="product-details">
+        <br>
+        <h2 class="product-title">TOTAL 17KG</h2>
+        <p class="product-price">PRICE : ₹1630 </p>
+        <p class="product-price">DELIVERY : ₹50 </p>
+       
+      </div>
+    </div>
+
+
+<!-- 
+  break
+-->
+
+    <div class="product-card">
+      
+      <div class="product-image">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2021/4/YV/DO/FB/7199765/lpg-supergas-12kg.jpg" alt="Product Image">
+      </div>
+      <div class="product-details">
+        <br>
+        <h2 class="product-title">SUPER 12KG</h2>
+        <p class="product-price">PRICE : ₹1150 </p>
+        <p class="product-price">DELIVERY : ₹50 </p>
+       
+      </div>
+    </div>
+
+<!-- 
+  break
+-->
+
+    <div class="product-card">
+      
+      <div class="product-image">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2022/9/OX/OK/YE/24982616/super-gas-lpg-cylinder-500x500.jpg" alt="Product Image">
+      </div>
+      <div class="product-details">
+        <br>
+        <h2 class="product-title">SUPER 17KG</h2>
+        <p class="product-price">PRICE : ₹1650 </p>
+        <p class="product-price">DELIVERY : ₹50 </p>
+       
+      </div>
+    </div>
+
+
+<!-- 
+  break
+-->
+
+    <div class="product-card">
+      
+      <div class="product-image">
+        <img src="https://trakop.s3.amazonaws.com/vendor/162602051760eb1aa52fbfb" alt="Product Image">
+      </div>
+      <div class="product-details">
+        <br>
+        <h2 class="product-title">HP 5KG</h2>
+        <p class="product-price">PRICE : ₹600 </p>
+        <p class="product-price">DELIVERY : ₹50 </p>
+       
+      </div>
+    </div>
+
+
+
+<!-- 
+  break
+-->
+
+
+
+    <div class="product-card">
+      
+      <div class="product-image">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2022/5/YH/YG/IC/4516718/19-kg-hp-gas-cylinder.jpg" alt="Product Image">
+      </div>
+      <div class="product-details">
+        <br>
+        <br>
+        <br>
+        <h2 class="product-title">HP 19KG</h2>
+        <p class="product-price">PRICE : ₹1930 </p>
+        <p class="product-price">DELIVERY : ₹50 </p>
+       
+      </div>
+    </div>
+
+
+
+    <!-- 
+  break
+-->
+
+
+    <div class="product-card">
+      
+      <div class="product-image">
+        <img src="https://pbs.twimg.com/media/Dvy5XcIU0AASMlb.jpg" alt="Product Image">
+      </div>
+      <div class="product-details">
+        <br>
+        <br>
+        <h2 class="product-title">BARATH 5KG</h2>
+        <p class="product-price">PRICE : ₹600 </p>
+        <p class="product-price">DELIVERY : ₹50 </p>
+       
+      </div>
+    </div>
+
+
+<!-- 
+  break
+-->
+
+
+
+
+    <div class="product-card">
+      
+      <div class="product-image">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2023/3/QA/CK/KR/23337488/19-kg-bharat-gas-cylinders.jpg" alt="Product Image">
+      </div>
+      <div class="product-details">
+        <br>
+        <br>
+        <br>
+        <h2 class="product-title">BARATH 19KG</h2>
+        <p class="product-price">PRICE : ₹1930 </p>
+        <p class="product-price">DELIVERY : ₹50 </p>
+       
+      </div>
+    </div>
+
+
+
+ <!-- 
+  break
+-->   
+
+    <div class="product-card">
+      
+      <div class="product-image">
+        <img src="https://4.imimg.com/data4/VN/GA/STDPRD-1137/indane-5-kg-non-domestic-lpg-cylinder-500x500.png" alt="Product Image">
+      </div>
+      <div class="product-details">
+        <br>
+        <br>
+        <h2 class="product-title">INDIAN 5KG</h2>
+        <p class="product-price">PRICE : ₹600 </p>
+        <p class="product-price">DELIVERY : ₹50 </p>
+       
+      </div>
+    </div>
+
+
+
+<!-- 
+  break
+-->
+
+
+    <div class="product-card">
+      
+      <div class="product-image">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2022/2/TG/LA/AH/4981931/indane-gas-cylinder-19-0-kg-c-500x500.jpg" alt="Product Image">
+      </div>
+      <div class="product-details">
+        <br>
+        <br>
+        <br>
+        <h2 class="product-title">INDIAN 19KG</h2>
+        <p class="product-price">PRICE : ₹1930 </p>
+        <p class="product-price">DELIVERY : ₹50 </p>
+       
+      </div>
+    </div>
+
+
+
+ <!-- 
+  break
+-->   
+    
+   
+    <script>const showAnim = gsap.from('.header', { 
+        yPercent: -100,
+        paused: true,
+        duration: 0.2
+      }).progress(1);
+      
+      ScrollTrigger.create({
+        start: "50px top",
+        end: 99999,
+        onUpdate: (self) => {
+          self.direction === -1 ? showAnim.play() : showAnim.reverse()
+        }
+      });
+      
+    
+    
+      </script>
+    
+    
+</body>
+
+</html>
